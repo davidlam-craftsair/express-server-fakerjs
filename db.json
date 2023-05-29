@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "username": "david lam",
+      "email": "johndoe@gmail.com"
+    },
+    {
+      "username": "happy mary",
+      "email": "happymarry@omail.com"
+    },
+    {
+      "name": "Angelo Wuckert",
+      "dob": "1950-9-3",
+      "email": "Angelo.Wuckert@gmail.com",
+      "username": "Angelo_Wuckert77",
+      "password": "AgPcExTJ6MYYIL1",
+      "phone": "447.265.0837 x7688",
+      "streetaddress": "8344 Rogelio Pike",
+      "citystatezip": "Blancheville, CA 61674",
+      "latitude": "-27.8133",
+      "longitude": "-112.3711",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/themikenagle/128.jpg"
+    }
+  ]
+}
