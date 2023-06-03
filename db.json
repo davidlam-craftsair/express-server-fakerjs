@@ -51,6 +51,19 @@
       "latitude": "13.3843",
       "longitude": "-157.0587",
       "avatar": "https://picsum.photos/200/?random?t=1685794019712"
+    },
+    {
+      "name": "Dr. Adelbert Rath",
+      "dob": "1951-7-26",
+      "email": "Adelbert45@hotmail.com",
+      "username": "Adelbert82",
+      "password": "sG0Zc5Cc8UlHYKk",
+      "phone": "1-749-647-9263 x7879",
+      "streetaddress": "914 Hills Fords",
+      "citystatezip": "Carriebury, UT 44821",
+      "latitude": "-76.5198",
+      "longitude": "159.9057",
+      "avatar": "https://picsum.photos/200/?random?t=1685796369621"
     }
   ]
 }
