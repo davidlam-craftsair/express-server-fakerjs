@@ -13,7 +13,7 @@ function getNavbar() {
             <a class="nav-link" href="allUsers.html">Show All Users (formatted)</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="data.html">Show All Users (raw)</a>
+            <a class="nav-link" href="allUsersRaw.html">Show All Users (raw)</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="deleteAllUsers.html">Delete All Users</a>

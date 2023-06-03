@@ -29,6 +29,11 @@ app.get('/allUsers', function(req, res) {
   res.send(db.get('users').value());
 })
 
+// return all users in raw style for endpoint allUsersRaw
+app.get('/allUsersRaw', function(req, res) {
+  res.send(db.get('users').value());
+})
+
 // // add a user, use POST method
 app.post('/add', function(req, res) {
   console.log("server side receive the request on post add");
@@ -60,9 +65,8 @@ app.post('/deleteAllUsers', function(req, res) {
   console.log("server side receive the request on deleting all users")
   // to respond, the server ie. this app would call db method to clear all users 
   db.get('users').value().length = 0;
-
+  db.write();
   res.send("users all deleted");
-
 })
 
 
