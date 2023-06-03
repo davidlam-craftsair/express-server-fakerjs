@@ -6,6 +6,7 @@ const adapter = new fs('db.json');
 const db = low(adapter);
 
 
+
 // init the data store
 db.defaults({ users: [] }).write();
 
