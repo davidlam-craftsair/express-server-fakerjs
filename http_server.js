@@ -25,7 +25,7 @@ app.get('/home', function(req, res) {
 
 
 // return all users
-app.get('/data', function(req, res) {
+app.get('/allUsers', function(req, res) {
   res.send(db.get('users').value());
 })
 
