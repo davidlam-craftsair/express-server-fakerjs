@@ -1,0 +1,44 @@
+<!-- A page for deleting all users -->
+<!DOCTYPE>
+<html>
+  <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
+    <link rel="stylesheet" href="./styles.css"> 
+  </head>
+  <body>
+    <div style="padding:50px">
+      <button type="button" class="btn btn-primary"
+      style="font-size:3em" onclick="deleteAllUsers()">Delete All Users</button>
+      <div id="status"></div>
+    </div>
+    <script>
+    function deleteAllUsers(){
+      console.log('Deleting all users');
+      // choose an endpoint in url where client browser would send the request to clear all users
+      const url = "http://localhost:3001/deleteAllUsers";
+
+      // with superagent to help us sent this request to the localhost server 
+      // POST method is choosen, as database need to be updated (with all data deleted) 
+      superagent
+        .post(url)
+        .end(function(err, res){
+          if (err){
+            console.log(err);
+          }
+          else{
+            // if no error, the server would send response to client browser 
+            console.log(res);
+            if (res.statusCode===200){
+              console.log('Users are successfully deleted');
+            }
+            
+          }
+        });
+    }
+    </script>
+
+  </body>
+
+</html>

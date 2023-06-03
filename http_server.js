@@ -11,9 +11,9 @@ db.defaults({ users: [] }).write();
 
 // data parser
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-  
+
 // use static files 
 app.use(express.static('./public')); // index.html
 
@@ -48,19 +48,22 @@ app.post('/add', function(req, res) {
   // reconstruct the user object from request body and write to database in the backend
   // after that it send the response
   db.get('users').push(user).write();
-  // now print out the users database in the console
+  // now print out the users database in the console/
   console.log(db.get('users').value());
   res.send(db.get('users').value());
 
 })
 
-function getAllUsersHTML() {
-  return "<div><p> Hello, All Users Page is to implemented</p></div>";
-  ;
-}
-app.get('/allUsers.html', function(req, res) {
-  res.send(getAllUsersHTML());
+// delete all users
+app.post('/deleteAllUsers', function(req, res) {
+  console.log("server side receive the request on deleting all users")
+  // to respond, the server ie. this app would call db method to clear all users 
+  db.get('users').value().length = 0;
+
+  res.send("users all deleted");
+
 })
+
 
 app.listen(3001, function() {
   console.log('listening on port 3001');
